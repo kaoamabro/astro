@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.logo {
+    @apply font-black text-3xl;
+}
+.btn {
+    @apply inline-block rounded-full bg-amber-300 px-6 py-2 hover:bg-amber-600 duration-300;
+}
+#gridd {
+    display: grid;
+    grid-template-columns:  repeat(6, 1fr);
+    grid-template-rows:  repeat(2,1fr);
+    grid-template-areas:
+        "grid1 grid1 grid1 grid2 grid3 grid4"
+        "grid1 grid1 grid1 grid5 grid6 grid7"     
+    ;
+}
+.grid1 {
+    grid-area: grid1;
+}
+.grid2 {
+    grid-area: grid2;
+}
+.grid3 {
+    grid-area: grid3;
+}
+.grid4 {
+    grid-area: grid4;
+}
+.grid5 {
+    grid-area: grid5;
+}
+.grid6 {
+    grid-area: grid6;
+}
+.grid7 {
+    grid-area: grid7;
+}
+section:nth-of-type(1) h2::before { 
+    content:'SNEAKER';
+}
+section:nth-of-type(2) h2::before { 
+    content:'PRODUCT';
+}
+h2::before {
+    font-size: 120px;
+    color: #e6dada;
+    position: absolute;
+    top: -28px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    letter-spacing: 50px;
+
+}
